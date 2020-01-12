@@ -47,5 +47,5 @@ spring:
   jta:
     atomikos:
       properties:
-        log-base-dir: ../logs
+        log-base-dir: ../mlogs
     transaction-manager-id: txManager

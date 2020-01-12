@@ -29,16 +29,12 @@ class MultidatasourceAtomikosApplicationTests {
 		List<SysUser> sysUsers = sysUserService.listUser();
 		System.out.println("sysUsers:" + sysUsers.size());
 
-//		List<User> users = userService.listUser();
-//		System.out.println("users:" + users.size());
+		List<User> users = userService.listUser();
+		System.out.println("users:" + users.size());
 	}
 
 	@Test
 	public void transaction() {
-		SysUser sysUser = new SysUser();
-		sysUser.setUserId(1);
-		sysUser.setUserName("name-" + LocalDateTime.now().getHour() + "-" + LocalDateTime.now().getSecond());
-		sysUserService.update(sysUser);
 
 		User user = new User();
 		user.setUserId(6);
