@@ -31,11 +31,15 @@ public class UserServiceImpl implements UserService {
     @Transactional
     public void update(User user) {
 
-        userMapper.update(user);
+        User user1 = new User();
+        user1.setUserId(6);
+        user1.setUserName("name-8888");
+
+        userMapper.update(user1);
 
         SysUser sysUser = new SysUser();
         sysUser.setUserId(1);
-        sysUser.setUserName("name-" + LocalDateTime.now().getHour() + "-" + LocalDateTime.now().getSecond());
+        sysUser.setUserName("name-8888");
         sysUserMapper.update(sysUser);
 
         int i = 10 / 0;

@@ -35,11 +35,7 @@ class MultidatasourceAtomikosApplicationTests {
 
 	@Test
 	public void transaction() {
-
-		User user = new User();
-		user.setUserId(6);
-		user.setUserName("name-" + LocalDateTime.now().getHour() + "-" + LocalDateTime.now().getSecond());
-		userService.update(user);
+		userService.update(null);
 	}
 
 }
